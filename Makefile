@@ -1,4 +1,4 @@
-.PHONY: clean build
+.PHONY: clean build run install utop
 
 all: build
 
@@ -8,4 +8,13 @@ clean:
 	-rm -rf src/.merlin
 
 build:
+	jbuilder build bin/main.exe
+
+install: build
 	jbuilder build @install
+
+run: install
+	./_build/default/bin/main.exe
+
+utop: install
+	jbuilder exec utop
