@@ -1,0 +1,17 @@
+opam-version: "1.2.2"
+version: "0.1"
+maintainer: "alin.popa@gmail.com"
+authors: ["Alin Popa"]
+homepage: "https://github.com/alinpopa/mlocamus"
+bug-reports: "https://github.com/alinpopa/mlocamus/issues"
+dev-repo: "https://github.com/alinpopa/mlocamus.git"
+license: "LGPL-3 with OCaml linking exception"
+build: [
+  ["jbuilder" "build" "--only" "mlocamus" "--root" "." "-j" jobs "@install"]
+]
+depends: [
+  "core"
+  "lwt"
+  "re"
+  "re.pcre"
+]

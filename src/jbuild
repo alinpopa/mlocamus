@@ -1,0 +1,6 @@
+(library
+  ((name mlocamus)
+   (public_name mlocamus)
+   ;(wrapped false)
+   (flags (:standard -warn-error A))
+   (libraries (core re re.pcre lwt))))
